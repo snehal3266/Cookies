@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+    <script src="cookie.js"></script>
+</head>
+
+<body>
+    <select id="name">
+        <option value="id"> id </option>
+        <option value="name"> name </option>
+        <option value="email"> email </option>
+    </select>
+    <input type="text" id="cvalue">
+    <button onclick="set()">Set Cookie</button>
+    <button onclick="get()">Get Cookie</button>
+    <button onclick="del()">Delete Cookie</button>
+    <div id="result"> </div>
+    <script>
+
+        function set() {
+
+            var name = document.getElementById("name").value;
+            var val = document.getElementById("cvalue").value;
+            setCookie(name, val);
+
+        }
+        function get() {
+
+            var name = document.getElementById("name").value;
+            alert(getCookie(name));
+
+        }
+        function del() {
+
+            var name = document.getElementById("name").value;
+            deleteCookie(name);
+
+
+        }
+    </script>
+
+</body>
+
+</html>
